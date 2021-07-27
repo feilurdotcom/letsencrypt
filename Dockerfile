@@ -13,5 +13,6 @@ RUN apk add --no-cache bash curl openssl \
 
 ENV DUCKDNS_TOKEN=""
 ENV ADDRESS=""
+ENV CONTACT_EMAIL=""
 
 CMD /opt/dehydrated/dehydrated --accept-terms --cron --domain ${ADDRESS} --challenge dns-01 --hook '/opt/dehydrated/hook.sh' --out /ssl
