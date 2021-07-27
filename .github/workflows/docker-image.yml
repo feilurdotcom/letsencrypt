@@ -33,6 +33,6 @@ jobs:
     - name: Build the Docker image
       run: |
         docker buildx build --push \
-        --tag ragnaro/letsencrypt:latest \
         --tag ragnaro/letsencrypt:$(date +%s) \
+        --tag ragnaro/letsencrypt:latest \
         --platform linux/amd64,linux/arm/v7,linux/arm64 .
